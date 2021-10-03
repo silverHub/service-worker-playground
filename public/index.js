@@ -19,7 +19,7 @@ if ("serviceWorker" in navigator) {
 
 document.querySelector("#fetch").addEventListener("click", () => {
   console.log("clicked");
-  fetch("/goto/test")
+  fetch("/goto/")
     .then((resp) => {
       console.log("resp", resp);
     })
