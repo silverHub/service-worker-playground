@@ -23,4 +23,5 @@ jobs:
     # Runs a single command using the runners shell
     - name: Deploy to gh-pages
       uses: peaceiris/actions-gh-pages@8457ade3d7045b4842e5a10f733d4153b7d05238
-
+      with: 
+        github_token: ${{ secrets.GITHUB_TOKEN }}
