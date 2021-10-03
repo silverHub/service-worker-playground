@@ -1,7 +1,8 @@
-console.log("Index.js");
+console.log("Index.js loaded");
+
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
-    .register("goto/sw.js", { scope: "/goto/" })
+    .register("sw.js", { scope: "/goto/" })
     .then(function (reg) {
       if (reg.installing) {
         console.log("Service worker installing");
@@ -17,16 +18,19 @@ if ("serviceWorker" in navigator) {
     });
 }
 
-document.querySelector("#fetch").addEventListener("click", () => {
-  console.log("clicked");
-  fetch("/goto/")
-    .then((resp) => {
-      console.log("resp", resp);
-    })
-    .catch((err) => {
-      console.log("err", err);
-    });
+/*
+document.querySelectorAll(".fetch").forEach((el) => {
+  el.addEventListener("click", () => {
+    fetch(el.dataset.url)
+      .then((resp) => {
+        resp.text().then((text) => console.log("resp", text));
+      })
+      .catch((err) => {
+        console.log("err", err);
+      });
+  });
 });
+*/
 
 window.addEventListener(
   "hashchange",

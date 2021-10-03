@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
     <title>Service worker playground</title>
   </head>
   <body>
     <h1 id="header">No hash</h1>
-    <button id="fetch">Fetch /goto/</button>
+    <section>
+      <a class="fetch" href="/goto/?id=test">Navigate /goto/?id=test</a><br />
+      <a class="fetch" href="/goto/test?id=test2">
+        Navigate /goto/test?id=test2
+      </a>
+      <div class="swing"></div>
+    </section>
+
     <script src="index.js"></script>
   </body>
 </html>
