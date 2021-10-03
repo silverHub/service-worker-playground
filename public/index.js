@@ -1,7 +1,7 @@
 console.log("Index.js");
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
-    .register("sw.js", { scope: "/goto/" })
+    .register("goto/sw.js", { scope: "/goto/" })
     .then(function (reg) {
       if (reg.installing) {
         console.log("Service worker installing");
